@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+
+  adminer:
+    container_name: adminer
+    image: adminer:4.3.1
+    restart: always
+    ports:
+      - 8089:8080
+
+  db:
+    container_name: db
+    build: ./services/db
+    restart: always
+    ports:
+      - 5434:5432
+    env_file:
+      - .env
+    volumes:
+      - ./.csr_data:/var/lib/postgresql/data
+    healthcheck:
+       test: exit 0
+
+  users:
+    container_name: users
+    build: ./services/users
+    restart: always
+    ports:
+      - 3001:3001
+    env_file:
+      - users.env
+    links:
+      - db
+
+  web:
+    container_name: web
+    build: 
+      context: ./services/web
+      dockerfile: Dockerfile-prod
+      args:
+        - REACT_APP_USERS_SERVICE_URL=http://${SERVER_IP}:3001/users
+    restart: always
+    ports:
+      - 80:80
+    links:
+      - users
+      
+

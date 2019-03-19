@@ -1,0 +1,14 @@
+
+\.vscode/last\.sql
+
+\.vscode/
+
+services/web/build/
+
+\.docker-compose\.yml\.swp
+
+*.pem
+
+docker-compose\.yml\.save
+
+*.env

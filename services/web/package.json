@@ -1,0 +1,40 @@
+{
+  "name": "inmuebles",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "auth0-js": "^9.6.1",
+    "axios": "^0.17.1",
+    "draft-js": "^0.10.5",
+    "draftjs-to-html": "^0.8.4",
+    "email-templates": "^3.6.1",
+    "google-maps-react": "^1.1.11",
+    "history": "^4.7.2",
+    "html-to-draftjs": "^1.4.0",
+    "immutability-helper": "^2.7.1",
+    "immutable": "^3.8.2",
+    "jquery": "^3.3.1",
+    "material-design-icons": "^3.0.1",
+    "materialize-css": "^0.100.2",
+    "moment": "^2.22.2",
+    "nodemailer": "^4.6.7",
+    "package.json": "^2.0.1",
+    "prop-types": "^15.6.2",
+    "rc-time-picker": "^3.3.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-draft-wysiwyg": "^1.12.13",
+    "react-leaflet": "^1.9.1",
+    "react-materialize": "^1.1.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^1.1.4",
+    "react-select": "^1.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build --history-api-fallback",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
